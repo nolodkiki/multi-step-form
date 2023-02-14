@@ -1,3 +1,6 @@
+import style from './steps.module.css'
+
+
 const Step = () => {
     return (
             <>
@@ -6,15 +9,15 @@ const Step = () => {
                 <div className="pb-3 text-gray-100">Please provide your name, email address, and phone number.</div>
                 <div className="nameInput pb-3">
                     <div className="text-xs">Name</div>
-                    <input className="w-full rounded border border-solid border-gray-200 py-2 px-3 font-medium" type="text" placeholder="e.g. Stephen King" />
+                    <input className={style.inputForm} type="text" placeholder="e.g. Stephen King" />
                 </div>
                 <div className="EmailInput pb-3">
                     <div className="name text-xs">Email Address</div>
-                    <input className="w-full rounded border border-solid border-gray-200 py-2 px-3 font-medium" type="text" placeholder="e.g. stephenking@lorem.com" />
+                    <input className={style.inputForm} type="text" placeholder="e.g. stephenking@lorem.com" />
                 </div>
                 <div className="PhoneInput pb-3">
                     <div className="name text-xs">Phone Number</div>
-                    <input className="w-full rounded border border-solid border-gray-200 py-2 px-3 font-medium" type="text" placeholder="e.g. +1 234 567 890" />
+                    <input className={style.inputForm} type="text" placeholder="e.g. +1 234 567 890" />
                 </div>
             </div>
             
