@@ -8,10 +8,10 @@ import style from './steps.module.css'
 const Step2 = () => {
     return (
         <>
-            <div className="mx-auto w-80 rounded-xl bg-white p-5 shadow-xl z-30">
+            <div className={style.container}>
                 <div className="pb-3 text-2xl font-bold text-blue-100">Select your plan</div>
                 <div className="pb-3 text-gray-100">You have the option of monthly or yearly billing.</div>
-                <div className='flex flex-col gap-3'>
+                <div className={style.flexColGap}>
                     <div className="border border-solid border-gray-200 w-full rounded-md flex items-center p-3">
                         <div className="icon"><img src={arcade} alt="" /></div>
                         <div className="pl-3 leading-tight ">
@@ -36,9 +36,9 @@ const Step2 = () => {
                 </div>
                 <div className='rounded-md flex items-center justify-between px-12 h-12 bg-gray-50 mt-5'>
                     <div>Monthly</div>
-                    <label class={style.switch}>
+                    <label className={style.switch}>
                         <input type="checkbox" />
-                            <span class={style.slider}></span>
+                            <span className={style.slider}></span>
                     </label>
                     <div>Yearly</div>
                 </div>
