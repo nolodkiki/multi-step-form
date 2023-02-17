@@ -10,7 +10,7 @@ import Step5 from './components/Steps/Step5'
 
 
 function App() {
-
+  
   return (
     <div className="App">
       <div className="h-screen w-screen bg-gray-200">
@@ -19,11 +19,11 @@ function App() {
           <div className='flex flex-col content-between'>
             <img className='absolute left-1/2 -translate-x-1/2 z-0 w-full' src={bgMb} alt="" />
             <Header />
-            {/* <Step1 /> */}
+            <Step1 />
             {/* <Step2 /> */}
             {/* <Step3 /> */}
             {/* <Step4 /> */}
-            <Step5 />
+            {/* <Step5 /> */}
           </div>
 
           <Footer />

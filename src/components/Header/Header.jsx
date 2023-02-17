@@ -2,6 +2,7 @@ import style from './header.module.css'
 
 
 const Header = () => {
+    console.log('rerender')
     return (<>
         <ul className="flex justify-center gap-5 pt-7 pb-7 z-10">
                 <a className={style.step} href="#">1</a>

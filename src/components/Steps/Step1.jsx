@@ -1,7 +1,13 @@
+import { useDispatch, useSelector } from 'react-redux'
+import { addNameValue, addEmailValue, addPhoneValue } from '../../Redux/slices/valueSlice'
 import style from './steps.module.css'
 
 
 const Step = () => {
+    const count = useSelector((state) => state.value)
+    const dispatch = useDispatch()
+    
+
     return (
         <>
             <div className={style.container}>
@@ -10,15 +16,15 @@ const Step = () => {
                 <div className={style.flexColGap}>
                     <div className="nameInput">
                         <div className="text-xs">Name</div>
-                        <input className={style.inputForm} type="text" placeholder="e.g. Stephen King" />
+                        <input onChange={(e) => dispatch(addNameValue(e.target.value))} className={style.inputForm} type="text" placeholder="e.g. Stephen King" value={count.name}/>
                     </div>
                     <div className="EmailInput">
                         <div className="name text-xs">Email Address</div>
-                        <input className={style.inputForm} type="text" placeholder="e.g. stephenking@lorem.com" />
+                        <input onChange={(e) => dispatch(addEmailValue(e.target.value))} className={style.inputForm} type="email" placeholder="e.g. stephenking@lorem.com" value={count.email}/>
                     </div>
                     <div className="PhoneInput">
                         <div className="name text-xs">Phone Number</div>
-                        <input className={style.inputForm} type="text" placeholder="e.g. +1 234 567 890" />
+                        <input onChange={(e) => dispatch(addPhoneValue(e.target.value))} className={style.inputForm} type="number" placeholder="e.g. +1 234 567 890" value={count.phone}/>
                     </div>
                 </div>
 
