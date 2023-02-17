@@ -20,6 +20,10 @@ module.exports = {
       },
       backgroundImage: {
         'bgMb': "url('/assets/images/bg-sidebar-mobile.svg')",
+      },
+      fontSize: {
+        'main': '16px',
+        'small': '14px'
       }
     },
   },
