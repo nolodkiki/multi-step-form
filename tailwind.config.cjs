@@ -24,6 +24,9 @@ module.exports = {
       fontSize: {
         'main': '16px',
         'small': '14px'
+      },
+      width: {
+        '87': '355px'
       }
     },
   },

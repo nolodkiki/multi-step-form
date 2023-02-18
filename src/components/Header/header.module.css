@@ -1,3 +1,0 @@
-.step {
-    @apply hover:bg-white hover:text-blue-100 ease-in duration-300 rounded-full border border-solid border-white px-3 py-1 font-medium text-white active:bg-white active:text-blue-100
-}
