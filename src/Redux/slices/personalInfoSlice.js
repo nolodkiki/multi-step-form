@@ -6,8 +6,8 @@ const initialState = {
     phone: ''
 }
 
-export const valueSlice = createSlice({
-    name: 'value',
+export const personalInfoSlice = createSlice({
+    name: 'personalInfo',
     initialState,
     reducers: {
         addNameValue(state, action) {
@@ -23,6 +23,6 @@ export const valueSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { addNameValue, addEmailValue, addPhoneValue } = valueSlice.actions
+export const { addNameValue, addEmailValue, addPhoneValue } = personalInfoSlice.actions
 
-export default valueSlice.reducer
+export default personalInfoSlice.reducer

@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { addNameValue, addEmailValue, addPhoneValue } from '../../Redux/slices/valueSlice'
+import { addNameValue, addEmailValue, addPhoneValue } from '../../Redux/slices/personalInfoSlice'
 import style from './steps.module.css'
 
 
 const Step = () => {
-    const count = useSelector((state) => state.value)
+    const count = useSelector((state) => state.personalInfo)
     const dispatch = useDispatch()
     
 

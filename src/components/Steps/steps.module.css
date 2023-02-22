@@ -1,5 +1,5 @@
 .container {
-    @apply mx-auto w-87 rounded-xl bg-white px-5 py-10 shadow-xl z-30
+    @apply mx-auto w-80 rounded-xl bg-white px-5 py-10 shadow-xl z-30
 }
 
 .inputForm {
@@ -13,6 +13,11 @@
 .flexColGap {
     @apply flex gap-3 flex-col
 }
+
+.planButton {
+    @apply focus:bg-magnolia focus:border-blue-100 border border-solid border-gray-200 w-full rounded-md flex items-center p-3 text-left
+}
+
 
 /* Toggle switcher */
 

@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import value from './slices/valueSlice'
+import personalInfo from './slices/personalInfoSlice'
 import step from './slices/stepSlice'
+import selectPlan from './slices/selectPlan'
 
 export const store = configureStore({
     reducer: {
-        value,
-        step
+        personalInfo,
+        step,
+        selectPlan
     }
 })
