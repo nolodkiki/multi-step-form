@@ -1,6 +1,5 @@
-import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { selectedPlan, selectedPrice } from '../Redux/slices/selectPlan'
+import { selectedPlan, selectedPrice } from '../Redux/slices/selectPlanSlice'
 
 const Plan = ({plan, icon, period}) => {
     const statePlan = useSelector(state => state.selectPlan) 
