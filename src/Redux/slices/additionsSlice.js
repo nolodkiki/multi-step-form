@@ -28,8 +28,10 @@ export const additionsSlice = createSlice({
     name: 'additions',
     initialState,
     reducers: {
-        selectOnlineService(state) {
-            state.addOnlineService.selected = !state.addOnlineService.selected
+        selectOnlineService(state, action) {
+            for(const item in state) {
+                state[item].id === action.payload && (state[item].selected = !state[item].selected)
+            }
         }
     },
 })

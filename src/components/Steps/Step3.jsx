@@ -7,8 +7,15 @@ import style from './steps.module.css'
 const Step3 = () => {
     const state = useSelector(state => state.additions)
     const dispatch = useDispatch()
-    const onlineService = () => {
-        dispatch(selectOnlineService())
+    const onlineService = (id) => {
+        dispatch(selectOnlineService(id))
+    }
+    const additions = () => {
+        const rows = []
+        for (let item in state) {
+            rows.push(<Addition key={state[item].id} add={state[item].add} description={state[item].description} price={state[item].price} selected={state[item].selected} id={state[item].id} action={onlineService} />)
+        }
+        return rows
     }
 
     return (
@@ -17,9 +24,7 @@ const Step3 = () => {
                 <div className="pb-3 text-2xl font-bold text-blue-100">Pick add-ons</div>
                 <div className="pb-3 text-gray-100">Add-ons help enhance your gaming experience.</div>
                 <div className={style.flexColGap}>
-                    <Addition add={state.addOnlineService.add} description={state.addOnlineService.description} price={state.addOnlineService.price} selected={state.addOnlineService.selected} func={onlineService} />
-                    <Addition add={state.addStorage.add} description={state.addStorage.description} price={state.addStorage.price} />
-                    <Addition add={state.addCustomProfile.add} description={state.addCustomProfile.description} price={state.addCustomProfile.price} />
+                    {additions()}
                 </div>
 
             </div>

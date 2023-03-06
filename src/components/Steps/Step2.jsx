@@ -3,7 +3,6 @@ import Advanced from '../../assets/images/icon-advanced.svg'
 import Pro from '../../assets/images/icon-pro.svg'
 
 import style from './steps.module.css'
-import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Plan from '../Plan'
 import { changePeriod, selectedPlan, selectedPrice } from '../../Redux/slices/selectPlanSlice'

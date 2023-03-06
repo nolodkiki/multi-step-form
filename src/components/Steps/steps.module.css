@@ -7,7 +7,7 @@
 }
 
 .radioButton {
-    @apply flex items-center w-full relative pl-4 py-3 px-3 border-2 border-solid border-gray-200 rounded-md
+    @apply flex items-center w-full relative pl-4 py-3 px-3 border-2 border-solid border-gray-200 rounded-md cursor-pointer
 }
 
 .flexColGap {
