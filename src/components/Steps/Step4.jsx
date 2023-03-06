@@ -15,13 +15,15 @@ const Step4 = () => {
     const period = plan.period ? '/yr' : '/mo'
 
     const totalPriceAdds = () => {
-        const totalPrice = 0
+        let totalPrice = 0
         for (const item in additions) {
-            additions[item].selected && plan.period ? additions[item].yearlyPrice : additions[item].monthlyPrice
+            additions[item].selected && (plan.period ? totalPrice += additions[item].yearlyPrice : totalPrice += additions[item].monthlyPrice)
         }
+        totalPrice += Number(planPrice)
+        return totalPrice
     }
+    
 
-    const total = planPrice + 1
 
 
     const FinishAdds = ({ add, price }) => {
@@ -68,10 +70,10 @@ const Step4 = () => {
 
                 <div className='flex justify-between px-4 pt-5'>
                     <div className='text-gray-400'>
-                        Total (per month)
+                        Total (per {plan.period ? 'year' : 'month'})
                     </div>
                     <div className='text-lg text-blue-200 font-bold'>
-                        +12/mo
+                        +{totalPriceAdds()}{period}
                     </div>
                 </div>
 

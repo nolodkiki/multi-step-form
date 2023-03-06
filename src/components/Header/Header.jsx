@@ -17,7 +17,7 @@ const Header = () => {
 
     return (<>
         <ul className="flex justify-center gap-5 pt-7 pb-7 z-10">
-                {activeStep === 5 ? '' : mapingNumber}
+                {mapingNumber}
             </ul>
 
             </>
