@@ -5,31 +5,34 @@ const initialState = {
         id: 1,
         add: 'Online service',
         description: 'Access to multiplayer games',
-        price: 1,
+        monthlyPrice: 1,
+        yearlyPrice: 10,
         selected: false
     },
     addStorage: {
         id: 2,
         add: 'Larger storage',
         description: 'Extra 1TB of cloud save',
-        price: 2,
+        monthlyPrice: 2,
+        yearlyPrice: 20,
         selected: false
     },
     addCustomProfile: {
         id: 3,
         add: 'Customizable profile',
         description: 'Custom theme on your profile',
-        price: 2,
+        monthlyPrice: 2,
+        yearlyPrice: 20,
         selected: false
-    },
+    }
 }
 
 export const additionsSlice = createSlice({
     name: 'additions',
     initialState,
     reducers: {
-        selectOnlineService(state, action) {
-            for(const item in state) {
+        selectAdds(state, action) {
+            for (const item in state) {
                 state[item].id === action.payload && (state[item].selected = !state[item].selected)
             }
         }
@@ -37,6 +40,6 @@ export const additionsSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { selectOnlineService } = additionsSlice.actions
+export const { selectAdds } = additionsSlice.actions
 
 export default additionsSlice.reducer
