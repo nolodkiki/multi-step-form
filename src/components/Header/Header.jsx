@@ -12,15 +12,13 @@ const Header = () => {
     }
 
 
-    const mapingNumber = numbers.map((e, i) => <a onClick={() => onClickButton(e)} key={i} className={activeStep === e ? "bg-white text-blue-100 rounded-full border border-solid border-white px-3 py-1 font-medium ease-in duration-300" : "hover:bg-white hover:text-blue-100 ease-in duration-300 rounded-full border border-solid border-white px-3 py-1 font-medium text-white" } href="#">{e}</a>)
+    const mapingNumber = numbers.map((e, i) => <a onClick={() => onClickButton(e)} key={i} className={activeStep === e ? "bg-white text-blue-100 rounded-full border border-solid border-white px-3 py-1 font-medium ease-in duration-300" : "hover:bg-white hover:text-blue-100 ease-in duration-300 rounded-full border border-solid border-white px-3 py-1 font-medium text-white"} href="#">{e}</a>)
 
 
-    return (<>
+    return (
         <ul className="flex justify-center gap-5 pt-7 pb-7 z-10">
-                {mapingNumber}
-            </ul>
-
-            </>
+            {mapingNumber}
+        </ul>
     )
 }
 
