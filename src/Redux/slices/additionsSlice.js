@@ -33,7 +33,7 @@ export const additionsSlice = createSlice({
     reducers: {
         selectAdds(state, action) {
             for (const item in state) {
-                state[item].id === action.payload && (state[item].selected = !state[item].selected)
+                state[item].id === action.payload && (state[item].selected = !state[item].selected) // filter
             }
         }
     },
