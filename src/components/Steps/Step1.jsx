@@ -1,19 +1,9 @@
-import { useEffect, useRef } from 'react'
-import { useFormContext } from 'react-hook-form'
-import { useDispatch, useSelector } from 'react-redux'
-import { addNameValue, addEmailValue, addPhoneValue } from '../../Redux/slices/personalInfoSlice'
+import { useSelector } from 'react-redux'
 import style from './steps.module.css'
 
 
-const Step1 = () => {
+const Step1 = ({nameValue, setNameValue, emailValue, setEmailValue, phoneValue, setPhoneValue}) => {
     const count = useSelector((state) => state.personalInfo)
-    const dispatch = useDispatch()
-
-    const { register, formState: { errors } } = useFormContext()
-
-
-
-
 
     return (
         <>
@@ -23,20 +13,21 @@ const Step1 = () => {
                 <div className={style.flexColGap} >
                     <div className="nameInput">
                         <div className="text-xs">Name:</div>
-
-                        <input onChange={(e) => dispatch(addNameValue(e.target.value))} className={style.inputForm} type="name" placeholder="e.g. Stephen King" value={count.name} />
+                        <input  onChange={(e) => setNameValue(e.target.value)} className={style.inputForm} type="name" placeholder="e.g. Stephen King" value={nameValue} />
+                        {count.errors.name ? <p>err</p> : ''}
                     </div>
                     <div className="EmailInput">
                         <div className="name text-xs">Email Address</div>
-                        <input {...register('email', { required: true })} onChange={(e) => dispatch(addEmailValue(e.target.value))} className={style.inputForm} type="email" placeholder="e.g. stephenking@lorem.com" value={count.email} />
-                        <div className='h-6'>
-                            {errors?.email && <p>ERROR</p>}
-                            {console.log(errors?.email)}
-                        </div>
+                        <input onChange={(e) => setEmailValue(e.target.value)} className={style.inputForm} type="email" placeholder="e.g. stephenking@lorem.com" value={emailValue} />
+                        {count.errors.email ? <p>err</p> : ''}
+
                     </div>
                     <div className="PhoneInput">
                         <div className="name text-xs">Phone Number</div>
-                        <input onChange={(e) => dispatch(addPhoneValue(e.target.value))} className={style.inputForm} type="number" placeholder="e.g. +1 234 567 890" value={count.phone} />
+                        <input  onChange={(e) => setPhoneValue(e.target.value)} className={style.inputForm} type="number" placeholder="e.g. +1 234 567 890" value={phoneValue} />
+                        {count.errors.phone ? <p>err</p> : ''}
+
+
                     </div>
                 </div>
 
