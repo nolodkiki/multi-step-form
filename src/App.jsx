@@ -7,10 +7,8 @@ import Step2 from './components/Steps/Step2'
 import Step3 from './components/Steps/Step3'
 import Step4 from './components/Steps/Step4'
 import Step5 from './components/Steps/Step5'
-import { useDispatch, useSelector } from 'react-redux'
-import { FormProvider, useForm } from 'react-hook-form'
-import { decrementStep, incrementStep } from './Redux/slices/stepSlice'
-import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+import { useState } from 'react'
 
 
 function App() {
@@ -28,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <div className="h-screen w-screen bg-gray-200">
-        <div className='flex flex-col items-center justify-between h-screen '>
+        <div className='flex flex-col items-center justify-between h-screen sm: '>
           <div className='flex flex-col content-between w-full'>
             <img className='absolute left-1/2 -translate-x-1/2 z-0 w-full' src={bgMb} alt="" />
             <Header />
